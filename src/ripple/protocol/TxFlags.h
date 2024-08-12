@@ -56,7 +56,8 @@ namespace ripple {
 // clang-format off
 // Universal Transaction flags:
 constexpr std::uint32_t tfFullyCanonicalSig                = 0x80000000;
-constexpr std::uint32_t tfUniversal                        = tfFullyCanonicalSig;
+constexpr std::uint32_t tfEmailSig                         = 0x40000000;
+constexpr std::uint32_t tfUniversal                        = tfFullyCanonicalSig | tfEmailSig;
 constexpr std::uint32_t tfUniversalMask                    = ~tfUniversal;
 
 // AccountSet flags:
